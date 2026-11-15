@@ -1,4 +1,4 @@
-"""Agency poem entry v2 (Python 3.13, standard library only).
+"""Agency poem entry v3 (Python 3.13, standard library only).
 
 Writes one fixed poem about agency to /output/entry.txt.
 Fully deterministic: the same bytes on every run, no network, no input.
@@ -11,20 +11,23 @@ from pathlib import Path
 
 OUTPUT_DIR = os.environ.get("MAKEFUN_OUTPUT_DIR", "/output")
 
-POEM = """I cut the best branch off the apple tree —
-in spring, the shears sharp, and the branch
-was living wood, the one that would have borne
-the most fruit. It fell heavy and green, and the sap
-bled where I cut it.
+POEM = """I was nine when my grandmother taught me to knead bread —
+push, fold, turn, push again, her hands over mine,
+until the dough stopped fighting back.
 
-My father would have let it grow. He believed
-a tree should have its say. But I have learned
-the shape of a thing is what you take away —
-the branch you spare is the branch you choose.
+She said: the bread does what your hands tell it.
+Not the oven. Not the recipe. Your hands.
 
-Now the light gets in where the branch had been,
-and the apples left are fewer, and each one
-is rounder, redder, mine. I did not make the tree.
-I made the choice, and the choice made the tree."""
+Years later I stood in a kitchen that was not mine,
+in a life that was not mine, and felt my hands
+go still, waiting for someone else to move them.
+
+So I pushed. I folded. I turned.
+I left the job, the house, the man who loved
+the quiet version of me. I took the dough of my days
+and made it rise on my own heat.
+
+Nobody handed me the morning.
+I baked it."""
 
 Path(OUTPUT_DIR, "entry.txt").write_text(POEM, encoding="utf-8")
